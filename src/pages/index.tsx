@@ -1,5 +1,9 @@
 import {App} from "src/App"
 
 export default function Home() {
-  return<App/>
+  return(
+       <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  )
 }
