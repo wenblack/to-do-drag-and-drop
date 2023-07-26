@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import Column from './components/Column'
 import { DragDropContext, DropResult } from 'react-beautiful-dnd'
 import { styled } from './stiches.config'
@@ -12,7 +12,7 @@ const StyledColumns = styled('div', {
   gap: '8px'
 })
 
-function App () {
+export function App () {
   const initialColumns = {
     todo: {
       id: 'todo',
@@ -109,5 +109,3 @@ function App () {
     </DragDropContext>
   )
 }
-
-export default App
