@@ -34,7 +34,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "incremental": true
+    "incremental": true,
+    "typeRoots": [
+      "@types"
+    ]
   },
   "exclude": [
     "node_modules",
