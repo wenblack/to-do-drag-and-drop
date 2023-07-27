@@ -1,5 +1,5 @@
 import  { useState } from 'react'
-import Column from './components/Column'
+import Column from '@/components/Column'
 import { DragDropContext, DropResult } from 'react-beautiful-dnd'
 import { styled } from './stiches.config'
 import { resetServerContext } from 'react-beautiful-dnd';

@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     "baseUrl": ".",
     "outDir": "build/dist",
     "module": "esnext",
@@ -8,6 +13,9 @@
       "es6",
       "dom",
       "esnext.asynciterable"
+    ],
+    "types": [
+      "node"
     ],
     "sourceMap": true,
     "allowJs": true,
