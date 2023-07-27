@@ -7,7 +7,7 @@ interface ItemProps {
   index: number
 }
 
-const StyledItem = styled('div', {
+const StyledItem = styled('li', {
   backgroundColor: '#eee',
   borderRadius: 4,
   padding: '4px 8px',

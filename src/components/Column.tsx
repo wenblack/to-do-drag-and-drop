@@ -22,7 +22,7 @@ const StyledColumn = styled('div', {
   }
 })
 
-const StyledList = styled('div', {
+const StyledList = styled('ul', {
   backgroundColor: '#ddd',
   borderRadius: 8,
   padding: 16,

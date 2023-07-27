@@ -2,6 +2,7 @@ import  { useState } from 'react'
 import Column from './components/Column'
 import { DragDropContext, DropResult } from 'react-beautiful-dnd'
 import { styled } from './stiches.config'
+import { resetServerContext } from 'react-beautiful-dnd';
 
 const StyledColumns = styled('div', {
   display: 'grid',
@@ -99,8 +100,10 @@ export function App () {
     }
   }
 
+  resetServerContext();
+
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
+    <DragDropContext  onDragEnd={onDragEnd}>
       <StyledColumns>
         {Object.values(columns).map(col => (
           <Column col={col} key={col.id} />
