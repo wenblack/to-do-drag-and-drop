@@ -1,5 +1,5 @@
 import React from 'react'
-import Item from './Item'
+import {Item} from './Item'
 import { Droppable } from 'react-beautiful-dnd'
 import { styled } from '../stiches.config'
 
@@ -32,7 +32,7 @@ const StyledList = styled('ul', {
   marginTop: 8
 })
 
-const Column: React.FC<ColumnProps> = ({ col: { list, id } }) => {
+export function Column ({col:{id,list}}:ColumnProps) {
   return (
     <Droppable droppableId={id}>
       {provided => (
@@ -50,4 +50,3 @@ const Column: React.FC<ColumnProps> = ({ col: { list, id } }) => {
   )
 }
 
-export default Column
