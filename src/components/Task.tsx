@@ -16,7 +16,7 @@ export interface cardProps{
     tagTwo?:string
 }
 
-export function Task ({content, title, tagOne,tagTwo, id}:cardProps){
+export function Task ({id, content, title, tagOne,tagTwo }:cardProps){
     return(
         <Draggable draggableId={content} index={id}>
             {provided => (

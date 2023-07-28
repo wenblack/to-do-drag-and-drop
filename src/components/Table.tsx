@@ -59,6 +59,7 @@ export function Table (){
                 <h2 className="font-bold text-3xl mb-8">A fazer</h2>
                 <div className=" flex flex-col  gap-6">
                   <Task 
+                    id={1}
                     title="#boraCodar um Kanban 🧑🏾‍💻"
                     content="Novo desafio do #boraCodar da Rocketseat, onde é proposto
                     construir um quadro de Kanban."
@@ -67,6 +68,7 @@ export function Table (){
                   />
                 
                   <Task 
+                    id={2}
                     title="Manter a ofensiva 🔥"
                     content=" Manter minha atividade na plataforma da Rocketseat para não
                     perder a ofensiva"
@@ -79,6 +81,7 @@ export function Table (){
                 <h2 className="font-bold text-3xl mb-8">Fazendo</h2>
                 <div className="flex flex-col  gap-6">
                   <Task
+                    id={3}
                     title="Conferir o novo desafio 🚀"
                     content="Conferir o novo projeto do #boraCodar para fazê-lo da melhor maneira possível"
                     tagOne="rocketseat"
@@ -91,6 +94,7 @@ export function Table (){
                 <h2 className="font-bold text-3xl mb-8">Feito</h2>
                 <div className="flex flex-col gap-6">
                   <Task
+                    id={4}
                     title="#boraCodar uma página de login 🧑‍💻"
                     content="Novo desafio do #boraCodar da Rocketseat, onde é proposto
                       construir uma página de login."

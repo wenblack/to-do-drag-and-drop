@@ -40,7 +40,7 @@ export function Column ({col:{id,list}}:ColumnProps) {
           <h2>{id}</h2>
           <StyledList {...provided.droppableProps} ref={provided.innerRef}>
             {list.map((text, index) => (
-              <Task id={index} key={index} content={text} title='New task'  />
+              <Task id={index} tagOne='rocketseat' tagTwo='desafio' key={index} content={text} title='New task'  />
             ))}
             {provided.placeholder}
           </StyledList>
