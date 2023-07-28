@@ -10,8 +10,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { FormEventHandler, MouseEventHandler } from "react"
-import editIcon from "@/assets/pencil.svg"
-import Image from "next/image"
+import { Edit } from "lucide-react"
 import { DialogClose } from "@radix-ui/react-dialog"
 
 
@@ -27,7 +26,7 @@ export function ChangeNameButton({click,submitForm, value, changeText}:buttonPro
     <Dialog >
       <DialogTrigger asChild>
         <Button variant="ghost">
-          <Image src={editIcon} alt="" />
+          <Edit />
         </Button>
       </DialogTrigger>
       <DialogContent  className="sm:max-w-[425px] bg-white text-xl">

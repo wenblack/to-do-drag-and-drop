@@ -6,17 +6,23 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Tag } from "./Tag"
+import { Draggable } from "react-beautiful-dnd"
 
-interface cardProps{
+export interface cardProps{
+    id:number
     title:string
     content:string,
     tagOne?:string
     tagTwo?:string
 }
 
-export function Task ({content, title, tagOne,tagTwo}:cardProps){
+export function Task ({content, title, tagOne,tagTwo, id}:cardProps){
     return(
-        <Card className="w-full max-w-[300px] shadow-xl">
+        <Draggable draggableId={content} index={id}>
+            {provided => (
+                <Card className="w-full max-w-[300px] shadow-xl"    ref={provided.innerRef}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}>
             <CardHeader>
                 <CardTitle className="text-xl">{title}</CardTitle>
             </CardHeader>
@@ -33,7 +39,8 @@ export function Task ({content, title, tagOne,tagTwo}:cardProps){
               
             </CardFooter>   
         
-        </Card>
-
+                </Card>
+            )}
+        </Draggable>
     )
 }

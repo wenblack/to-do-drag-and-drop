@@ -1,7 +1,7 @@
 import React from 'react'
-import {Item} from './Item'
 import { Droppable } from 'react-beautiful-dnd'
 import { styled } from '../stiches.config'
+import { Task } from './Task'
 
 interface ColumnProps {
   col: {
@@ -40,7 +40,7 @@ export function Column ({col:{id,list}}:ColumnProps) {
           <h2>{id}</h2>
           <StyledList {...provided.droppableProps} ref={provided.innerRef}>
             {list.map((text, index) => (
-              <Item key={text} text={text} index={index} />
+              <Task id={index} key={index} content={text} title='New task'  />
             ))}
             {provided.placeholder}
           </StyledList>
