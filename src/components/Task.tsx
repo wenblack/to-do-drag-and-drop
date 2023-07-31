@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/card"
 import { Tag } from "./Tag"
 import { Draggable } from "react-beautiful-dnd"
-import { CardDetails } from "./CardDetails"
 
 
 
@@ -28,27 +27,18 @@ export function Task ({id, content, title, tagOne,tagTwo }:cardProps){
                 {...provided.dragHandleProps}>
                 
                 <CardHeader>
-                    <CardTitle className="text-xl">
-                        <>
-                        <div className="hidden sm:block">{title}</div>
-                        <CardDetails
-                          content={content}
-                          id={id}
-                          title={title}
-                          tagOne={tagOne}
-                          tagTwo={tagTwo}
-                        />
-                        </>
+                    <CardTitle className="text-xl flex">
+                        {title}
                     </CardTitle>
                 </CardHeader>
   
                 <CardContent>
-                    <p className="hidden sm:flex text-gray-800  text-lg ">
+                    <p className=" text-gray-800  text-lg ">
                         {content}
                     </p>
                 </CardContent>
                 
-                <CardFooter className="hidden sm:flex gap-4  flex-row md:flex-row justify-around">
+                <CardFooter className="flex gap-4 flex-col  sm:flex-row  justify-around">
                     {tagOne ===undefined ?<></>:<Tag value={tagOne}/>}
                     {tagTwo ===undefined ?<></>:<Tag value={tagTwo}/>}     
                 </CardFooter>   
