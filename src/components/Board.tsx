@@ -1,23 +1,34 @@
 import  { useState } from 'react'
 import {Column} from '@/components/Column'
 import { DragDropContext, DropResult } from 'react-beautiful-dnd'
-import { styled } from './stiches.config'
 import { resetServerContext } from 'react-beautiful-dnd';
 
-const StyledColumns = styled('div', {
-  display: 'grid',
-  gridTemplateColumns: '1fr 1fr 1fr',
-  margin: '10vh auto',
-  width: '80%',
-  height: '80vh',
-  gap: '8px'
-})
 
-export function App () {
+
+export function Board () {
   const initialColumns = {
     todo: {
       id: 'todo',
-      list: ['item 1', 'item 2', 'item 3']
+      list: [
+        {
+          title:"#boraCodar um Kanban 🧑🏾‍💻",
+          content:"Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um quadro de Kanban.",
+          tagOne:"rocketseat",
+          tagTwo:"desafio"
+        },
+        {
+          title:"Manter a ofensiva 🔥",
+          content:" Manter minha atividade na plataforma da Rocketseat para não perder a ofensiva",
+          tagOne:"rocketseat",
+          tagTwo:"desafio"
+        },
+        {
+          title:"Conferir o novo desafio 🚀",
+          content:"Conferir o novo projeto do #boraCodar para fazê-lo da melhor maneira possível",
+          tagOne:"rocketseat",
+        },
+
+          ]
     },
     doing: {
       id: 'doing',
@@ -29,7 +40,7 @@ export function App () {
     }
   }
   const [columns, setColumns] = useState(initialColumns)
-
+  
   const onDragEnd = ({ source, destination }: DropResult) => {
     // Make sure we have a valid destination
     if (destination === undefined || destination === null) return null
@@ -99,16 +110,17 @@ export function App () {
       return null
     }
   }
-
+  
   resetServerContext();
 
   return (
-    <DragDropContext  onDragEnd={onDragEnd}>
-      <StyledColumns>
+    
+    <DragDropContext onDragEnd={onDragEnd}>
+      <div className='grid  mt-16 grid-rows-1 grid-cols-3 space-x-8  mb-16" bg-transparent'>
         {Object.values(columns).map(col => (
-          <Column col={col} key={col.id} />
+          <Column id={col.id} list={col.list} tableName={col.id}  key={col.id} />
         ))}
-      </StyledColumns>
+      </div>
     </DragDropContext>
   )
 }

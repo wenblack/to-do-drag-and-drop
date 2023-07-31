@@ -1,50 +1,33 @@
 import React from 'react'
 import { Droppable } from 'react-beautiful-dnd'
-import { styled } from '../stiches.config'
 import { Task } from './Task'
 
 interface ColumnProps {
-  col: {
     id: string
-    list: string[]
-  }
+    list:taskProps[]
+    tableName:string
 }
 
-const StyledColumn = styled('div', {
-  padding: '24px 16px',
-  display: 'flex',
-  flexDirection: 'column',
-  marginTop: 8,
-
-  h2: {
-    margin: 0,
-    padding: '0 16px'
+interface taskProps{
+   title:string,
+  content:string,
+  tagOne?:string,
+  tagTwo?:string
   }
-})
 
-const StyledList = styled('ul', {
-  backgroundColor: '#ddd',
-  borderRadius: 8,
-  padding: 16,
-  display: 'flex',
-  flexDirection: 'column',
-  flexGrow: 1,
-  marginTop: 8
-})
-
-export function Column ({col:{id,list}}:ColumnProps) {
+export function Column ({id,list, tableName}:ColumnProps) {
   return (
     <Droppable droppableId={id}>
       {provided => (
-        <StyledColumn>
-          <h2>{id}</h2>
-          <StyledList {...provided.droppableProps} ref={provided.innerRef}>
+          <div className=" flex flex-col m-6 ">
+          <h2 className="font-bold text-3xl mb-8">{tableName}</h2>
+          <div className=" flex flex-col  gap-6"{...provided.droppableProps} ref={provided.innerRef}> 
             {list.map((text, index) => (
-              <Task id={index} tagOne='rocketseat' tagTwo='desafio' key={index} content={text} title='New task'  />
+              <Task id={index} tagOne={text.tagOne} tagTwo={text.tagTwo}  key={index} content={text.content} title={text.title}  />
             ))}
             {provided.placeholder}
-          </StyledList>
-        </StyledColumn>
+          </div>
+        </div>
       )}
     </Droppable>
   )
