@@ -3,8 +3,6 @@ import {Column} from '@/components/Column'
 import { DragDropContext, DropResult } from 'react-beautiful-dnd'
 import { resetServerContext } from 'react-beautiful-dnd';
 
-
-
 export function Board () {
   const initialColumns = {
     todo: {
@@ -114,7 +112,6 @@ export function Board () {
   resetServerContext();
 
   return (
-    
     <DragDropContext onDragEnd={onDragEnd}>
       <div className='grid  mt-16 grid-rows-1  grid-cols-3   mb-16" bg-transparent'>
         {Object.values(columns).map(col => (
