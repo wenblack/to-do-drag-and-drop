@@ -116,7 +116,7 @@ export function Board () {
   return (
     
     <DragDropContext onDragEnd={onDragEnd}>
-      <div className='grid  mt-16 grid-rows-1 grid-cols-3 space-x-8  mb-16" bg-transparent'>
+      <div className='grid  mt-16 grid-rows-1  grid-cols-3   mb-16" bg-transparent'>
         {Object.values(columns).map(col => (
           <Column id={col.id} list={col.list} tableName={col.id}  key={col.id} />
         ))}

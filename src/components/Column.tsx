@@ -19,7 +19,7 @@ export function Column ({id,list, tableName}:ColumnProps) {
   return (
     <Droppable droppableId={id}>
       {provided => (
-          <div className=" flex flex-col m-6 ">
+          <div className=" select-none flex flex-col lg:m-4 md:m-4 sm:m-2  ">
           <h2 className="font-bold text-3xl mb-8">{tableName}</h2>
           <div className=" flex flex-col  gap-6"{...provided.droppableProps} ref={provided.innerRef}> 
             {list.map((text, index) => (

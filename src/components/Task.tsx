@@ -20,7 +20,7 @@ export function Task ({id, content, title, tagOne,tagTwo }:cardProps){
     return(
         <Draggable draggableId={content} index={id}>
             {provided => (
-            <Card className="w-full p-4 max-w-[300px] shadow-xl"    ref={provided.innerRef}
+            <Card className="w-full md:p-4 max-w-[300px] shadow-xl"    ref={provided.innerRef}
                 {...provided.draggableProps}
                 {...provided.dragHandleProps}>
                 <CardHeader>
@@ -28,7 +28,7 @@ export function Task ({id, content, title, tagOne,tagTwo }:cardProps){
             </CardHeader>
   
             <CardContent>
-                <p className="text-gray-800 text-lg">
+                <p className="text-gray-800  text-lg">
                     {content}
                     
                 </p>
