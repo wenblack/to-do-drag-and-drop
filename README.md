@@ -1,15 +1,43 @@
-# CodeAlong: Multi-Column Drag and Drop in React
+<h1 align="center"> Um Kanban </h1>
 
-Built to supplement a tutorial. [Read on Dev.to](https://dev.to/imjoshellis/codealong-multi-column-drag-and-drop-in-react-3781)
+<p align="center">
+<a href="https://www.rocketseat.com.br/boracodar">#boraCodar</a> são desafios semanais, promovido pela Rocketseat para ensino de tecnologias WEB. <br/>
+</p>
 
-## ✨️ Demo
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
 
-![demo gif](https://github.com/imjoshellis/react-beautiful-dnd-tutorial/blob/master/readme/final%20product.gif?raw=true)
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
 
-[Live Demo](https://imjoshellis-dnd-tutorial.netlify.app) • [Code Sandbox](https://codesandbox.io/s/react-beautiful-dnd-tutorial-6296o)
+<br>
 
-## 👨🏻‍💻️ Clone Locally
+<p align="center">
+  <img src=".github/preview.jpg" width="100%">
+</p>
 
-This is built with `create-react-app`, so the standard `yarn start` works to dev on your machine.
+## 🚀 Tecnologias
 
-You can learn more about `create-react-app` in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started). To learn React, check out the [React documentation](https://reactjs.org/).
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- React
+- NextJs
+- Typescript
+- Shadcn/ui
+- React Beautiful DnD
+
+## 🔖 Layout
+
+Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/community/file/1220368226816658013). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT.
+
+---
+
+Feito com ♥ by Wender Barbosa :wave: [Acompanhe meus outros projetos](https://github.com/wenblack)
